@@ -9,13 +9,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const { Pool } = require('pg');
 
 const pool = new Pool({
-  host: 'db.usjlvzxargnzqddtppnb.supabase.co',
-  port: 5432,
-  user: 'postgres',
-  password: 'syriahotel$10213123',
-  database: 'postgres',
-  ssl: { rejectUnauthorized: false }, // Required for Supabase
-});
+    connectionString:"postgresql://postgres.usjlvzxargnzqddtppnb:syriahotel$10213123@aws-0-eu-central-2.pooler.supabase.com:5432/postgres"
+  })
+  
 
 
 app.get('/api/locations', async (req, res) => {
